@@ -1,27 +1,27 @@
 <html>
-	<head>
-		<title>.FuhQ ♥</title>
-		<link async href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css"/>
-		<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet'>
-		<style>
+    <head>
+        <title>.FuhQ ♥</title>
+        <link async href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet'>
+        <style>
 body {
 margin:0;
 padding:0;
-background: linear-gradient(180deg, #238786, #3c7c9e, #548b93);
-background-size: 600% 600%;
--webkit-animation: back 18s ease infinite;
--moz-animation: back 18s ease infinite;
-animation: back 18s ease infinite;
-	overflow:hidden;
+    overflow:hidden;
+background: url(img/back.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
-			canvas {
+            canvas {
 zoom:15.0;
 position:absolute;
 top:-20;
 left:0;
 opacity:0.1;
 -ms-transform: rotate(-7deg); -webkit-transform: rotate(-7deg); transform: rotate(-7deg);
-				z-index:30;
+                z-index:30;
 }
 .at {
 position:relative;
@@ -31,8 +31,8 @@ color:white;
 top:380;
 font-size:16;
 text-align:center;
-	z-index:20;
-	-webkit-animation: oppa2 5s ease;
+    z-index:20;
+    -webkit-animation: oppa2 5s ease;
 -moz-animation: oppa2 5s ease;
 animation: oppa2 5s ease;
 }
@@ -46,22 +46,10 @@ animation: oppa2 5s ease;
     50%{background-position:50% 100%}
     100%{background-position:50% 0%}
 }
-@keyframes back { 
+@keyframes back {
     0%{background-position:50% 0%}
     50%{background-position:50% 100%}
     100%{background-position:50% 0%}
-}
-#cover {
-width:100%;
-height:100%;
-background: url(img/back.png) no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-position:absolute;
-opacity:1.0;
-z-index:1;
 }
 .logo {
   -webkit-box-sizing: content-box;
@@ -156,7 +144,7 @@ animation: oppa2 5s ease;
     0%{font-size:250;opacity:0.0;}
     100%{font-size:90;opacity:1.0;}
 }
-@keyframes tilt { 
+@keyframes tilt {
     0%{font-size:250;opacity:0.0;}
     100%{font-size:90;opacity:1.0;}
 }
@@ -168,7 +156,7 @@ animation: oppa2 5s ease;
     0%{opacity:0.0;width:0;}
     100%{opacity:1.0;width:300;}
 }
-@keyframes oppa { 
+@keyframes oppa {
     0%{opacity:0.0;width:0;}
     100%{opacity:1.0;width:300;}
 }
@@ -180,7 +168,7 @@ animation: oppa2 5s ease;
     0%{opacity:0.0;width:250;}
     100%{opacity:1.0;width:300;}
 }
-@keyframes oppa2 { 
+@keyframes oppa2 {
     0%{opacity:0.0;width:250;}
     100%{opacity:1.0;width:300;}
 }
@@ -191,16 +179,16 @@ position:absolute;
 top:20;
 right:20;
 font-size:13;
-	z-index:50;
+    z-index:50;
 }
 a, .at, .f1 {
 z-index:7;
 }
-		</style>
-	</head>
-	<body><canvas id='canvas' width="500" height="200"></canvas>
-        	<audio src="/img/fuh.mp3" id="audio"></audio>
-        	<script src="/js/main.js"></script><div id="cover"></div><small>Sami design</small>
-		<a href="jailbait.cc"><p class="at">@jailbait.cc</p></a><div class="logo">.FuhQ ♥</div><div id="musta"></div><div id="musta2"></div><div id="seppo"></div><div id="seppa"></div><a class="f1" href="https://steamcommunity.com/id/fuhq-/">Add me on Steam</a>
-	</body>
+        </style>
+    </head>
+    <body><canvas id='canvas' width="500" height="200"></canvas>
+            <audio src="/img/fuh.mp3" id="audio"></audio>
+            <script src="/js/main.js"></script><small>Sami design</small>
+        <a href="jailbait.cc"><p class="at">@jailbait.cc</p></a><div class="logo">.FuhQ ♥</div><div id="musta"></div><div id="musta2"></div><div id="seppo"></div><div id="seppa"></div><a class="f1" href="https://steamcommunity.com/id/fuhq-/">Add me on Steam</a>
+    </body>
 </html>
