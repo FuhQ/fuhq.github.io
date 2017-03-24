@@ -1,0 +1,206 @@
+<html>
+	<head>
+		<title>.FuhQ ♥</title>
+		<link async href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css"/>
+		<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet'>
+		<style>
+body {
+margin:0;
+padding:0;
+background: linear-gradient(180deg, #238786, #3c7c9e, #548b93);
+background-size: 600% 600%;
+-webkit-animation: back 18s ease infinite;
+-moz-animation: back 18s ease infinite;
+animation: back 18s ease infinite;
+	overflow:hidden;
+}
+			canvas {
+zoom:15.0;
+position:absolute;
+top:-20;
+left:0;
+opacity:0.1;
+-ms-transform: rotate(-7deg); -webkit-transform: rotate(-7deg); transform: rotate(-7deg);
+				z-index:30;
+}
+.at {
+position:relative;
+margin:auto auto auto auto;
+font-family:Oswald;
+color:white;
+top:380;
+font-size:16;
+text-align:center;
+	z-index:20;
+	-webkit-animation: oppa2 5s ease;
+-moz-animation: oppa2 5s ease;
+animation: oppa2 5s ease;
+}
+@-webkit-keyframes back {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes back {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes back { 
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+#cover {
+width:100%;
+height:100%;
+background: url(img/back.png) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+position:absolute;
+opacity:1.0;
+z-index:1;
+}
+.logo {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font-size:90;
+  border: none;
+  font-family:Oswald;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  text-overflow: clip;
+  text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;
+position:relative;
+top:240;
+-webkit-animation: tilt 1s ease;
+-moz-animation: tilt 1s ease;
+animation: tilt 1s ease;
+z-index:2;
+letter-spacing: 10px;
+}
+#seppo {
+width:300;
+height:3;
+position:relative;
+top:250;
+margin:auto auto auto auto;
+background:rgb(30,242,241);
+z-index:2;
+-webkit-animation: oppa 2s ease;
+-moz-animation: oppa 2s ease;
+animation: oppa 2s ease;
+}
+#seppa {
+width:300;
+height:3;
+position:relative;
+top:260;
+margin:auto auto auto auto;
+background:rgb(246,5,10);
+z-index:1;
+-ms-transform: rotate(15deg); -webkit-transform: rotate(15deg); transform: rotate(15deg);
+-webkit-animation: oppa 2s ease;
+-moz-animation: oppa 2s ease;
+animation: oppa 2s ease;
+}
+#musta {
+width:300;
+height:3;
+position:relative;
+top:272;
+margin:auto auto auto auto;
+background:black;
+z-index:1;
+-ms-transform: rotate(15deg); -webkit-transform: rotate(15deg); transform: rotate(15deg);
+-webkit-animation: oppa 1.7s ease;
+-moz-animation: oppa 1.7s ease;
+animation: oppa 1.7s ease;
+}
+#musta2 {
+width:300;
+height:3;
+position:relative;
+top:256;
+margin:auto auto auto auto;
+background:black;
+z-index:1;
+-webkit-animation: oppa 1.7s ease;
+-moz-animation: oppa 1.7s ease;
+animation: oppa 1.7s ease;
+}
+.f1, .f2, .f3, .f4 {
+font-family:Oswald;
+font-size:16;
+color:white;
+z-index:10;
+text-decoration:none;
+display:block;
+width:300;
+margin:auto auto auto auto;
+height:6;
+position:relative;
+top:260;
+-webkit-animation: oppa2 5s ease;
+-moz-animation: oppa2 5s ease;
+animation: oppa2 5s ease;
+}
+@-webkit-keyframes oppa {
+    0%{font-size:250;opacity:0.0;}
+    100%{font-size:90;opacity:1.0;}
+}
+@-moz-keyframes tilt {
+    0%{font-size:250;opacity:0.0;}
+    100%{font-size:90;opacity:1.0;}
+}
+@keyframes tilt { 
+    0%{font-size:250;opacity:0.0;}
+    100%{font-size:90;opacity:1.0;}
+}
+@-webkit-keyframes oppa {
+    0%{opacity:0.0;width:0;}
+    100%{opacity:1.0;width:300;}
+}
+@-moz-keyframes oppa {
+    0%{opacity:0.0;width:0;}
+    100%{opacity:1.0;width:300;}
+}
+@keyframes oppa { 
+    0%{opacity:0.0;width:0;}
+    100%{opacity:1.0;width:300;}
+}
+@-webkit-keyframes oppa2 {
+    0%{opacity:0.0;width:250;}
+    100%{opacity:1.0;width:300;}
+}
+@-moz-keyframes oppa2 {
+    0%{opacity:0.0;width:250;}
+    100%{opacity:1.0;width:300;}
+}
+@keyframes oppa2 { 
+    0%{opacity:0.0;width:250;}
+    100%{opacity:1.0;width:300;}
+}
+small {
+color:white;
+font-family:Oswald;
+position:absolute;
+top:20;
+right:20;
+font-size:13;
+	z-index:50;
+}
+a {
+z-index:90;
+}
+		</style>
+	</head>
+	<body><canvas id='canvas' width="500" height="200"></canvas>
+        	<audio src="/img/fuh.mp3" id="audio"></audio>
+        	<script src="/js/main.js"></script><div id="cover"></div><small>Sami design</small>
+		<a href="jailbait.cc"><p class="at">@jailbait.cc</p></a><div class="logo">.FuhQ ♥</div><div id="musta"></div><div id="musta2"></div><div id="seppo"></div><div id="seppa"></div><a class="f1" href="http://steamcommunity.com/id/fuhq-/">Add me on Steam</a>
+	</body>
+</html>
