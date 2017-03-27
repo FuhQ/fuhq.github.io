@@ -1,4 +1,4 @@
-# fuhq.github.io
+# fuhq.pw
 My website :)
 
 # License
