@@ -1,219 +1,119 @@
-
+<!--
+A Finnish-Polish collaboration :^)
+ 
+Scripts and design by http://jakonen.org/
+ 
+If you find code syntax and formatting awful,
+bear in mind I am aware of this. :)
+-->
+ 
 <html>
-    <head>
-        <title>.FuhQ ♥</title>
-        <link async href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css"/>
-        <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet'>
-        <meta charset="utf-8">
-        <style>
-            body {
-            margin:0;
-            padding:0;
-            overflow:hidden;
-            background: url(https://fuhq.github.io/img/back.png) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            }
-            canvas {
-            zoom:15.0;
-            position:absolute;
-            top:-20;
-            left:0;
-            opacity:0.1;
-            -ms-transform: rotate(-7deg); -webkit-transform: rotate(-7deg); transform: rotate(-7deg);
-            z-index:30;
-            }
-            .at {
-            position:relative;
-            margin:auto auto auto auto;
-            font-family:Oswald;
-            color:white;
-            top:380;
-            font-size:16;
-            text-align:center;
-            z-index:20;
-            -webkit-animation: oppa2 5s ease;
-            -moz-animation: oppa2 5s ease;
-            animation: oppa2 5s ease;
-            }
-            @-webkit-keyframes back {
-            0%{background-position:50% 0%}
-            50%{background-position:50% 100%}
-            100%{background-position:50% 0%}
-            }
-            @-moz-keyframes back {
-            0%{background-position:50% 0%}
-            50%{background-position:50% 100%}
-            100%{background-position:50% 0%}
-            }
-            @keyframes back {
-            0%{background-position:50% 0%}
-            50%{background-position:50% 100%}
-            100%{background-position:50% 0%}
-            }
-            .logo {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-            font-size:90;
-            border: none;
-            font-family:Oswald;
-            color: rgb(51, 51, 51);
+<head>
+  <title>.FuhQ ❤</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <meta charset="utf-8">
+  <style>
+    body, html {
+      background:url(http://media.boingboing.net/wp-content/uploads/2015/09/coffee_in_rain_by_kirokaze-d98qb8z.gif);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #heading {
+        font-family:'VT323', cursive;
+        font-size:82;
+        color:#fff;
+        padding:30;
+        text-align: center;
+        position:relative;
+        top:28%;
+        text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+        opacity:0.6;
+      }
+      #menu {
+          font-family:'VT323', cursive;
+          font-size:30;
+          color:#eee;
+          padding:30;
+          text-align: center;
+          position:relative;
+          top:27%;
+          left:-50;
+          text-shadow:1px 1px 2px black;
+          opacity:0.7;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        #line {
+            font-family:'VT323', cursive;
+            font-size:30;
+            color:gold;
             text-align: center;
-            text-overflow: clip;
-            text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;
             position:relative;
-            top:240;
-            -webkit-animation: tilt 1s ease;
-            -moz-animation: tilt 1s ease;
-            animation: tilt 1s ease;
-            z-index:2;
-            letter-spacing: 10px;
-            }
-            #seppo {
-            width:300;
-            height:3;
-            position:relative;
-            top:250;
-            margin:auto auto auto auto;
-            background:rgb(30,242,241);
-            z-index:2;
-            -webkit-animation: oppa 2s ease;
-            -moz-animation: oppa 2s ease;
-            animation: oppa 2s ease;
-            }
-            #seppa {
-            width:300;
-            height:3;
-            position:relative;
-            top:260;
-            margin:auto auto auto auto;
-            background:rgb(246,5,10);
-            z-index:1;
-            -ms-transform: rotate(15deg); -webkit-transform: rotate(15deg); transform: rotate(15deg);
-            -webkit-animation: oppa 2s ease;
-            -moz-animation: oppa 2s ease;
-            animation: oppa 2s ease;
-            }
-            #musta {
-            width:300;
-            height:3;
-            position:relative;
-            top:272;
-            margin:auto auto auto auto;
-            background:black;
-            z-index:1;
-            -ms-transform: rotate(15deg); -webkit-transform: rotate(15deg); transform: rotate(15deg);
-            -webkit-animation: oppa 1.7s ease;
-            -moz-animation: oppa 1.7s ease;
-            animation: oppa 1.7s ease;
-            }
-            #musta2 {
-            width:300;
-            height:3;
-            position:relative;
-            top:256;
-            margin:auto auto auto auto;
-            background:black;
-            z-index:1;
-            -webkit-animation: oppa 1.7s ease;
-            -moz-animation: oppa 1.7s ease;
-            animation: oppa 1.7s ease;
-            }
-            .f1, .f2, .f3, .f4 {
-            font-family:Oswald;
-            font-size:16;
-            color:white;
-            z-index:10;
-            text-decoration:none;
-            display:block;
-            width:300;
-            margin:auto auto auto auto;
-            height:6;
-            position:relative;
-            top:260;
-            -webkit-animation: oppa2 5s ease;
-            -moz-animation: oppa2 5s ease;
-            animation: oppa2 5s ease;
-            }
-            @-webkit-keyframes oppa {
-            0%{font-size:250;opacity:0.0;}
-            100%{font-size:90;opacity:1.0;}
-            }
-            @-moz-keyframes tilt {
-            0%{font-size:250;opacity:0.0;}
-            100%{font-size:90;opacity:1.0;}
-            }
-            @keyframes tilt {
-            0%{font-size:250;opacity:0.0;}
-            100%{font-size:90;opacity:1.0;}
-            }
-            @-webkit-keyframes oppa {
-            0%{opacity:0.0;width:0;}
-            100%{opacity:1.0;width:300;}
-            }
-            @-moz-keyframes oppa {
-            0%{opacity:0.0;width:0;}
-            100%{opacity:1.0;width:300;}
-            }
-            @keyframes oppa {
-            0%{opacity:0.0;width:0;}
-            100%{opacity:1.0;width:300;}
-            }
-            @-webkit-keyframes oppa2 {
-            0%{opacity:0.0;width:250;}
-            100%{opacity:1.0;width:300;}
-            }
-            @-moz-keyframes oppa2 {
-            0%{opacity:0.0;width:250;}
-            100%{opacity:1.0;width:300;}
-            }
-            @keyframes oppa2 {
-            0%{opacity:0.0;width:250;}
-            100%{opacity:1.0;width:300;}
-            }
-            a, .at, .f1 {
-            z-index:9000;
-            text-decoration:none;
-            }
-            input {
-                position:absolute;
-                top:50;
-                left:50;
-                -webkit-appearance: none;
-                background:rgba(0,0,0,0.1);
-                border:1px #eee solid;
-            }
-        </style>
-    </head>
-    <body>
-        <input id="vol-control" type="range" min="0" max="100" step="1" oninput="volume(this.value)" onchange="SetVolume(this.value)"/>
-    
-        <!-- THIS IS THE VISUALIZER
-        <canvas id='canvas' width="500" height="200"></canvas>
-        -->
-    
-        <audio src="https://fuhq.github.io/img/fuh.mp3" id="audio" autoplay></audio>
-        <script src="/js/main.js"></script>
-        <a target="newTab" href="http://jailbait.cc/members/"
-           ><p class="at">@jailbait.cc</p>
-        </a>
-        <div class="logo">.FuhQ ♥</div>
-        <div id="musta"></div>
-        <div id="musta2"></div>
-        <div id="seppo"></div>
-        <div id="seppa"></div>
-        <a target="newTab" class="f1" href="https://steamcommunity.com/id/fuhq-/">Add me on Steam</a>
-        <img width="100" style="filter: invert(100%);opacity:0.6;position:absolute; bottom:27;padding-right:30;left:0;right:0;margin-left:auto;margin-right:auto;" src="http://i.imgur.com/tCQim5R.png">
-        <h4 style="opacity:0.6;position:absolute;display:block;width:99%; bottom:0;font-size:13;color:#fff;text-align:center;font-family:Helvetica;">design</h4>
-        <script>
-            window.volume = function(val)
-            {
-                var player = document.getElementById('audio');
-                player.volume = val / 100;
-            }
-        </script>
-    </body>
+            top:27%;
+            text-shadow:1px 1px 2px black;
+            opacity:0.7;
+          }
+          #cred {
+            position:absolute;
+            color:#fff;
+            opacity:0.6;
+            left:40;
+            bottom:40;
+            font-family:VT323;
+            font-size:23;
+          }
+  </style>
+</head>
+<body>
+  <div id="heading">
+    Epickyy
+  </div>
+  <div id="menu"></div>
+  <div id="line"></div>
+  <script>
+  typer('.FuhQ <span style="color:gold;"><3</span>','heading',50);
+  setTimeout(function() {                // THINGE 'link one' TO THE NAME
+    typer("> <a href='http://google.com/1/'>link one</a><br>&#160;&#160;&#160;> <a href='http://google.com/2/'>link one</a><br>&#160;&#160;&#160;&#160;&#160;&#160;> <a href='http://google.com/3/'>link one</a><br>",'menu',12);
+  }, 1500);        // ^ CHANGE THIS TO A LINK
+  setTimeout(function() {
+    typer('// Proudly @jailbait.cc','line',20);
+  }, 4600);
+  function typer(str,ids,spd) {
+          var arr = str.split(''); //Puts all string characters into an array.
+          var trg = [];
+          var lgg = "";
+          console.log(arr); //Spits out the array of characters for debugging.
+          for (var i = 0; i < arr.length; i++) { //Basic for loop.
+            (function(i){
+                window.setTimeout(function(){ //Set timeout for typing effect.
+                  trg.push(arr[i]); //Add the element of number i to the last position in a new array.
+                  lgg = trg.join(""); //Make the array into a string without commas.
+                  console.log(lgg); //Log all the strings for debugging.
+                  document.getElementById(ids).innerHTML = lgg; //Print onto the page.
+                }, i * spd); //Increase the timeout value each time.
+              }(i));
+          }
+          /*setTimeout(function() { //Cursor at the end of the line.
+            trg.push("_");
+            lgg = trg.join("");
+            document.getElementById(ids).innerHTML = lgg;
+          }, arr.length * spd + 10);*/
+        }
+  </script>
+  <div id="cred"><a href="http://jakonen.org">by Sami</a></div>
+</body>
 </html>
