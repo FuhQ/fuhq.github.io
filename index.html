@@ -1,422 +1,215 @@
-<!--
-Scripts and design by http://jakonen.org/
- 
-If you find code syntax and formatting awful,
-bear in mind I am aware of this. :)
--->
- 
 <html>
-<head>
-  <title>.FuhQ ❤</title>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
+    <meta name="google-site-verification" content="vO-OBPdlAtFqpryHFvDw6jJ0b_PIYSsB2_VtrEQ9nSU" />
     <meta charset="utf-8">
-  <style>
-    #cover {
-      width:100%;
-      height:100%;
-      background:black;
-      background-size:cover;
-      background-repeat:no-repeat;
-      position:absolute;
-      top:0;
-      left:0;
-      z-index:99;
-      display:block;
-      transition:opacity 1s;
-      opacity:1;
-    }
-    #load {
-      width:50;
-      height:50;
-      border-radius:50%;
-      background:none;
-      border:8px white solid;
-      border-top:8px gold solid;
-      margin:0 auto;
-      position:relative;
-      top:400;
-      opacity:0.5;
-      animation:spin 1.5s linear infinite;
-    }
-    @keyframes spin {
-          0% {transform:rotate(0deg);}
-          100% {transform:rotate(360deg);}
-    }
-    body, html {
-      background:url(http://i.imgur.com/UgyjOAu.gif);
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    #heading {
-        font-family:'VT323', cursive;
-        font-size:82;
-        color:#fff;
-        padding:30;
-        text-align: center;
+    <title>.FuhQ ❤</title>
+    <style media="screen">
+      .cover{
+        height:100%;
+        width:100%;
+        background:#000;
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index:99;
+        opacity:1.0;
+        transition:1s opacity;
+      }
+      .spinner {
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        background:#000;
+        border:2px black solid;
+        border-bottom:2px cyan solid;
+        animation:spin 1s infinite;
+        margin:0 auto;
         position:relative;
-        top:28%;
+        top:200px;
+      }
+      @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+      }
+      body {
+        font-family: 'Megrim', cursive;
+        font-size:30px;
+        color:#fff;
+        margin:0px;
+        padding:0px;
+        background-color:#000;
+        overflow:hidden;
+      }
+      h1{
+        color:#eee;
+        font-size:160px;
         text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
+                     0 2px 0 #c9c9c9,
+                     0 3px 0 #bbb,
+                     0 4px 0 #b9b9b9,
+                     0 5px 0 #aaa,
+                     0 6px 1px rgba(0,0,0,.1),
+                     0 0 5px rgba(0,0,0,.1),
+                     0 1px 3px rgba(0,0,0,.3),
+                     0 3px 5px rgba(0,0,0,.2),
+                     0 5px 10px rgba(0,0,0,.25),
+                     0 10px 10px rgba(0,0,0,.2),
+                     0 20px 20px rgba(0,0,0,.15);
+        transform:rotate(-7deg);
+        margin-top:-100px;
+        cursor:default;
         opacity:0.6;
       }
-      #menu {
-          font-family:'VT323', cursive;
-          font-size:30;
-          color:#eee;
-          padding:30;
-          text-align: center;
-          position:relative;
-          top:27%;
-          left:-50;
-          text-shadow:1px 1px 2px black;
-          opacity:0.7;
-        }
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
-        #line {
-            font-family:'VT323', cursive;
-            font-size:30;
-            color:gold;
-            text-align: center;
-            position:relative;
-            top:27%;
-            text-shadow:1px 1px 2px black;
-            opacity:0.7;
-          }
-          #cred {
-            position:absolute;
-            color:#fff;
-            opacity:0.6;
-            left:40;
-            bottom:40;
-            font-family:VT323;
-            font-size:23;
-          }
-          input[type=range] {
-            -webkit-appearance: none;
-            position:absolute;
-            transform:rotate(-90deg);
-            top:140;
-            left:140;
-            margin: 6.45px 0;
-          }
-          input[type=range]:focus {
-            outline: none;
-          }
-          input[type=range]::-webkit-slider-runnable-track {
-            width: 100%;
-            height: 6.1px;
-            cursor: pointer;
-            box-shadow: 0px 0px 1.7px rgba(193, 147, 41, 0), 0px 0px 0px rgba(211, 162, 48, 0);
-            background: #695cb6;
-            border-radius: 25px;
-            border: 0px solid #19d501;
-          }
-          input[type=range]::-webkit-slider-thumb {
-            box-shadow: 2.6px 2.6px 3.7px rgba(0, 170, 0, 0), 0px 0px 2.6px rgba(0, 195, 0, 0);
-            border: 2.8px solid #9980e4;
-            height: 19px;
-            width: 42px;
-            border-radius: 4px;
-            background: #ddc700;
-            cursor: pointer;
-            -webkit-appearance: none;
-            margin-top: -6.45px;
-          }
-          input[type=range]:focus::-webkit-slider-runnable-track {
-            background: #796ebe;
-          }
-          input[type=range]::-moz-range-track {
-            width: 100%;
-            height: 6.1px;
-            cursor: pointer;
-            box-shadow: 0px 0px 1.7px rgba(193, 147, 41, 0), 0px 0px 0px rgba(211, 162, 48, 0);
-            background: #695cb6;
-            border-radius: 25px;
-            border: 0px solid #19d501;
-          }
-          input[type=range]::-moz-range-thumb {
-            box-shadow: 2.6px 2.6px 3.7px rgba(0, 170, 0, 0), 0px 0px 2.6px rgba(0, 195, 0, 0);
-            border: 2.8px solid #9980e4;
-            height: 19px;
-            width: 42px;
-            border-radius: 4px;
-            background: #ddc700;
-            cursor: pointer;
-          }
-          input[type=range]::-ms-track {
-            width: 100%;
-            height: 6.1px;
-            cursor: pointer;
-            background: transparent;
-            border-color: transparent;
-            color: transparent;
-          }
-          input[type=range]::-ms-fill-lower {
-            background: #5b4dac;
-            border: 0px solid #19d501;
-            border-radius: 50px;
-            box-shadow: 0px 0px 1.7px rgba(193, 147, 41, 0), 0px 0px 0px rgba(211, 162, 48, 0);
-          }
-          input[type=range]::-ms-fill-upper {
-            background: #695cb6;
-            border: 0px solid #19d501;
-            border-radius: 50px;
-            box-shadow: 0px 0px 1.7px rgba(193, 147, 41, 0), 0px 0px 0px rgba(211, 162, 48, 0);
-          }
-          input[type=range]::-ms-thumb {
-            box-shadow: 2.6px 2.6px 3.7px rgba(0, 170, 0, 0), 0px 0px 2.6px rgba(0, 195, 0, 0);
-            border: 2.8px solid #9980e4;
-            height: 19px;
-            width: 42px;
-            border-radius: 4px;
-            background: #ddc700;
-            cursor: pointer;
-            height: 6.1px;
-          }
-          input[type=range]:focus::-ms-fill-lower {
-            background: #695cb6;
-          }
-          input[type=range]:focus::-ms-fill-upper {
-            background: #796ebe;
-          }
-            /* glitch css*/
-                .glitch {
-                  color: white;
-                  font-size: 100px;
-                  position: relative;
-                  width: 400px;
-                  margin: 0 auto;
-                }
- 
-                @keyframes noise-anim {
-                  0% {
-                    clip: rect(34px, 9999px, 75px, 0);
-                  }
-                  5% {
-                    clip: rect(78px, 9999px, 75px, 0);
-                  }
-                  10% {
-                    clip: rect(30px, 9999px, 89px, 0);
-                  }
-                  15% {
-                    clip: rect(60px, 9999px, 90px, 0);
-                  }
-                  20% {
-                    clip: rect(67px, 9999px, 1px, 0);
-                  }
-                  25% {
-                    clip: rect(32px, 9999px, 65px, 0);
-                  }
-                  30% {
-                    clip: rect(43px, 9999px, 94px, 0);
-                  }
-                  35% {
-                    clip: rect(11px, 9999px, 86px, 0);
-                  }
-                  40% {
-                    clip: rect(98px, 9999px, 34px, 0);
-                  }
-                  45% {
-                    clip: rect(89px, 9999px, 61px, 0);
-                  }
-                  50% {
-                    clip: rect(51px, 9999px, 79px, 0);
-                  }
-                  55% {
-                    clip: rect(97px, 9999px, 23px, 0);
-                  }
-                  60% {
-                    clip: rect(22px, 9999px, 13px, 0);
-                  }
-                  65% {
-                    clip: rect(12px, 9999px, 27px, 0);
-                  }
-                  70% {
-                    clip: rect(78px, 9999px, 34px, 0);
-                  }
-                  75% {
-                    clip: rect(45px, 9999px, 26px, 0);
-                  }
-                  80% {
-                    clip: rect(39px, 9999px, 30px, 0);
-                  }
-                  85% {
-                    clip: rect(68px, 9999px, 3px, 0);
-                  }
-                  90% {
-                    clip: rect(87px, 9999px, 4px, 0);
-                  }
-                  95% {
-                    clip: rect(91px, 9999px, 51px, 0);
-                  }
-                  100% {
-                    clip: rect(54px, 9999px, 68px, 0);
-                  }
-                }
-                .glitch:after {
-                  content: attr(data-text);
-                  position: absolute;
-                  left: 2px;
-                  text-shadow: -1px 0 red;
-                  top: 0;
-                  color: white;
-                  background: black;
-                  overflow: hidden;
-                  clip: rect(0, 900px, 0, 0);
-                  animation: noise-anim 2s infinite linear alternate-reverse;
-                }
- 
-                @keyframes noise-anim-2 {
-                  0% {
-                    clip: rect(79px, 9999px, 97px, 0);
-                  }
-                  5% {
-                    clip: rect(7px, 9999px, 49px, 0);
-                  }
-                  10% {
-                    clip: rect(17px, 9999px, 96px, 0);
-                  }
-                  15% {
-                    clip: rect(77px, 9999px, 33px, 0);
-                  }
-                  20% {
-                    clip: rect(95px, 9999px, 41px, 0);
-                  }
-                  25% {
-                    clip: rect(65px, 9999px, 2px, 0);
-                  }
-                  30% {
-                    clip: rect(85px, 9999px, 92px, 0);
-                  }
-                  35% {
-                    clip: rect(3px, 9999px, 56px, 0);
-                  }
-                  40% {
-                    clip: rect(49px, 9999px, 18px, 0);
-                  }
-                  45% {
-                    clip: rect(55px, 9999px, 93px, 0);
-                  }
-                  50% {
-                    clip: rect(93px, 9999px, 96px, 0);
-                  }
-                  55% {
-                    clip: rect(59px, 9999px, 31px, 0);
-                  }
-                  60% {
-                    clip: rect(51px, 9999px, 62px, 0);
-                  }
-                  65% {
-                    clip: rect(61px, 9999px, 37px, 0);
-                  }
-                  70% {
-                    clip: rect(57px, 9999px, 58px, 0);
-                  }
-                  75% {
-                    clip: rect(52px, 9999px, 46px, 0);
-                  }
-                  80% {
-                    clip: rect(32px, 9999px, 28px, 0);
-                  }
-                  85% {
-                    clip: rect(5px, 9999px, 10px, 0);
-                  }
-                  90% {
-                    clip: rect(17px, 9999px, 93px, 0);
-                  }
-                  95% {
-                    clip: rect(72px, 9999px, 92px, 0);
-                  }
-                  100% {
-                    clip: rect(18px, 9999px, 44px, 0);
-                  }
-                }
-                .glitch:before {
-                  content: attr(data-text);
-                  position: absolute;
-                  left: -2px;
-                  text-shadow: 1px 0 blue;
-                  top: 0;
-                  color: white;
-                  background: black;
-                  overflow: hidden;
-                  clip: rect(0, 900px, 0, 0);
-                  animation: noise-anim-2 3s infinite linear alternate-reverse;
-                }
-  </style>
-</head>
-<body onload="setTimeout(funktio, 900)">
-  <div id="cover">
-    <div id="load">
+      .controls {
+        font-size:20px;
+        margin:20px;
+        opacity:0.6;
+      }
+      .fullscreen-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+      }
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity:0.3;
+      }
+      .menu {
+        font-size:30px;
+        transform:rotate(-7deg);
+        margin-top:-100px;
+        margin-left:20px;
+      }
+      .menu i {
+        margin:15px;
+      }
+      .menu a {
+        color:#fff;
+        transition:color 0.5s, opacity 0.5s;
+        opacity:0.6;
+      }
+      .menu a:hover {
+        color:purple;
+        opacity:0.8;
+      }
+      small {
+        color:#fff;
+        font-size:14px;
+        position:absolute;
+        bottom:20px;
+        left:20px;
+      }
+      small a {
+        color:#f3f3f3;
+        text-decoration:none;
+        transition:color 0.5s;
+      }
+      small a:hover {
+        color:purple;
+      }
+      #v {
+        filter:blur(30px);
+        transition:filter 1s;
+      }
+      #t {
+        z-index:-1;
+        font-size:700px;
+        color:#fff;
+        position:absolute;
+        top:-850px;
+        font-family: 'Heebo', sans-serif;
+        text-align:center;
+        opacity:0.0;
+        transform:rotate(-12deg);
+        transition:opacity 0.4s;
+      }
+      .bg-pic {
+        background: url(bg.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:100%;
+        width:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+        opacity:0.3;
+      }
+    </style>
+  </head>
+  <body onload="reveal()">
+    <div class="cover" id="cover">
+      <div class="spinner">
+      </div>
     </div>
-  </div>
-  <div id="heading" class="glitch">
-  </div>
-  <input value="30" id="vol-control" type="range" min="0" max="100" step="1" oninput="volume(this.value)" onchange="SetVolume(this.value)"/>
-  <audio src="http://www.fuhq.pw/melody.mp3" loop id="bgm"></audio>
-  <div id="menu"></div>
-  <div id="line"></div>
-  <script>
-  function funktio() {
-    document.getElementById('cover').style.opacity = 0;
-    setTimeout(function() {
-      document.getElementById('cover').style.display = 'none';
-    }, 1000);
-    document.getElementById('bgm').volume = 0.2; // STARTING VOLUME HERE
-    document.getElementById('bgm').play();
-    setTimeout(function() {
-      typer('.FuhQ <span style="color:gold;"><3</span>','heading',50);
-      setTimeout(function() {                // THINGE 'link one' TO THE NAME
-        typer("> <a target='newTab' href='https://steamcommunity.com/id/mp9/'>Steam Profile</a><br>&#160;&#160;&#160;> <a target='newTab' href='http://steamcommunity.com/groups/debit'>Steam Group</a><br>",'menu',12);
-      }, 1500);        // ^ CHANGE THIS TO A LINK
-      setTimeout(function() {
-        typer('// Proudly <a style="color:gold;" href="http://null.cash/" target="newTab">@הull.cash</a>','line',20);
-      }, 4000);
-    }, 100);
-  }
-  function typer(str,ids,spd) {
-          var arr = str.split('');
-          var trg = [];
-          var lgg = "";
-          console.log(arr);
-          for (var i = 0; i < arr.length; i++) {
-            (function(i){
-                window.setTimeout(function(){
-                  trg.push(arr[i]);
-                  lgg = trg.join("");
-                  console.log(lgg);
-                  document.getElementById(ids).innerHTML = lgg;
-                }, i * spd);
-              }(i));
-          }
-        }
-        document.body.addEventListener('contextmenu', function(ev) {
-              ev.preventDefault();
-              document.getElementById('line').innerHTML = "// noice try :)";
-              setTimeout(function() {
-                document.getElementById('line').innerHTML = '// Proudly <a style="color:gold;" href="http://null.cash/" target="newTab">@הull.cash</a>';
-              }, 100);
-              return false;
-        }, false);
-        window.volume = function(val) {
-                var player = document.getElementById('bgm');
-                player.volume = val / 100;
-        }
-  </script>
-  <div id="cred">by Sami</div>
-</body>
+    <div class="controls">
+      <a onclick="document.getElementById('q').paused?document.getElementById('q').play():document.getElementById('q').pause()"><i class="fa fa-pause" aria-hidden="true"></i></a>
+      <a onclick="document.getElementById('q').volume -= 0.05"><i class="fa fa-volume-off" aria-hidden="true"></i></a>
+      <a onclick="document.getElementById('q').volume += 0.05"><i class="fa fa-volume-down" aria-hidden="true"></i></a>
+    </div>
+    <table style="width: 100%; height:100%;">
+      <tr>
+         <td style="text-align: center; vertical-align: middle;">
+              <h1>.FuhQ ❤</h1>
+              <div class="menu">
+                <a onmouseover="t('TWITTER');document.getElementById('v').style.filter = 'blur(100px)';" onmouseleave="c();document.getElementById('v').style.filter = 'blur(0px)';" href="https://twitter.com/untrustbanned" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a onmouseover="t('STEAM');document.getElementById('v').style.filter = 'blur(100px)';" onmouseleave="c();document.getElementById('v').style.filter = 'blur(0px)';" href="https://steamcommunity.com/id/MP9/" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a>
+                <a onmouseover="t('GROUP');document.getElementById('v').style.filter = 'blur(100px)';" onmouseleave="c();document.getElementById('v').style.filter = 'blur(0px)';" href="https://steamcommunity.com/groups/NAMEHERE/" target="_blank"><i class="fa fa-users" aria-hidden="true"></i></a>
+              </div>
+         </td>
+      </tr>
+      <h2 id="t"></h2>
+      <audio src="music.mp3">
+
+      </audio>
+    </table>
+    <div class="bg-pic" id="v">
+    </div>
+    <small>
+      <a href="http://sami.zone/" target="_blank">sami design</a>
+    </small>
+    <script type="text/javascript">
+      document.getElementById('v').volume = 0.1;
+
+      function reveal() {
+        setTimeout(function() {
+          document.getElementById('cover').style.opacity = 0;
+          setTimeout(function() {
+            document.getElementById('cover').style.display = "none";
+            setTimeout(function() {
+              document.getElementById('v').style.filter = "blur(0px)";
+            }, 500);
+          }, 1500);
+        }, 500);
+      }
+
+      function t(n) {
+        let t = document.getElementById('t');
+        t.style.opacity = 0;
+        t.innerHTML = n;
+        setTimeout(function() {
+          t.style.opacity = 0.03;
+        }, 1);
+      }
+
+      function c() {
+        let t = document.getElementById('t');
+        t.innerHTML = "";
+        t.style.opacity = 0;
+      }
+    </script>
+  </body>
 </html>
