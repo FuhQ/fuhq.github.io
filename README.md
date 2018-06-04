@@ -1,4 +1,4 @@
-# fuhq.pw
+# carded.cash
 My website :)
 
 # License
