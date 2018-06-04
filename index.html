@@ -150,7 +150,7 @@
       }
     </style>
   </head>
-  <body onload="reveal()">
+  <body onmousemove="document.getElementById('yes').play()">
     <div class="cover" id="cover">
       <div class="spinner">
       </div>
@@ -172,9 +172,9 @@
          </td>
       </tr>
       <h2 id="t"></h2>
-      <audio src="music.mp3" id="q" autoplay loop>
-
-      </audio>
+      <audio controls id="yes">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
     </table>
     <div class="bg-pic" id="v">
     </div>
